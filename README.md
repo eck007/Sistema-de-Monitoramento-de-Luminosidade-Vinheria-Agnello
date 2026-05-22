@@ -1,30 +1,140 @@
-# Sistema-de-Monitoramento-de-Luminosidade-Vinheria-Agnello
+🍷 Vinheria Agnello — Sistema Inteligente de Monitoramento de Vinhos
+📖 Sobre o Projeto
 
-🍷 Sistema de Monitoramento de Luminosidade – Vinheria Agnello
+A conservação correta dos vinhos é extremamente importante para garantir sua qualidade, sabor e durabilidade. Pequenas mudanças de temperatura, umidade ou luminosidade podem comprometer completamente o armazenamento das garrafas.
 
-📌 Descrição do Projeto Este projeto tem como objetivo desenvolver um sistema de monitoramento de luminosidade utilizando Arduino, simulando o controle de iluminação em uma vinheria. A luminosidade é um fator importante na conservação do vinho, pois níveis elevados de luz podem comprometer sua qualidade. O sistema criado realiza a leitura da luz ambiente e utiliza LEDs e um buzzer para indicar o estado do ambiente. 
+Pensando nisso, desenvolvemos um sistema inteligente de monitoramento ambiental para vinherias, adegas e depósitos de armazenamento de vinho.
 
-📦 Dependências Para execução do projeto, são necessários os seguintes recursos: - Arduino IDE (ou simulador como Tinkercad/Wokwi) - Navegador web - Conhecimentos básicos de Arduino e eletrônica 
+O projeto utiliza sensores conectados a um Arduino para analisar o ambiente em tempo real e alertar imediatamente quando as condições estiverem inadequadas.
 
-⚙️ Componentes Utilizados - 1 Arduino Uno - 1 Sensor de luminosidade (LDR) - 3 LEDs (verde, amarelo e vermelho) - 3 Resistores (220Ω recomendados) - 1 Buzzer - Protoboard - Jumpers 
+🎯 Qual problema o sistema resolve?
 
-🔌 Funcionamento do Sistema O sensor LDR capta a luminosidade do ambiente e envia um valor analógico para o Arduino (variando de 0 a 1023). Com base nesse valor, o sistema classifica o ambiente em três estados: 
+Muitas adegas e depósitos podem sofrer com:
 
-🟢 Ambiente OK (luz baixa) - Valor menor que 300 - LED verde aceso - Buzzer desligado 
-🟡 Estado de alerta (luz moderada) - Valor entre 300 e 700 - LED amarelo aceso - Buzzer desligado 
-🔴 Problema (luz alta) - Valor maior que 700 - LED vermelho aceso - Buzzer é ativado por 3 segundos Caso a luminosidade permaneça alta, o buzzer volta a ser acionado após o intervalo. 
+excesso de calor
+baixa umidade
+iluminação inadequada
+falta de monitoramento constante
 
-🧠 Lógica do Código O Arduino realiza continuamente a leitura do sensor através do pino analógico A0: int luz = analogRead(sensorLuz); Com base nesse valor, estruturas condicionais (if, else if, else) determinam qual LED será acionado e se o buzzer deve tocar. Quando o nível de luminosidade está acima do permitido, o buzzer é ativado por 3 segundos: digitalWrite(buzzer, HIGH); delay(3000); digitalWrite(buzzer, LOW); 
+Esses fatores podem causar:
 
-▶️ Como Reproduzir o Projeto 1. Acesse o Tinkercad (ou Wokwi) 2. Monte o circuito: - LDR no pino A0 - LED verde no pino 10 - LED amarelo no pino 9 - LED vermelho no pino 8 - Buzzer no pino 7 3. Insira o código no Arduino 4. Inicie a simulação 5. Ajuste a luminosidade do LDR para testar 
+perda da qualidade do vinho
+oxidação
+alteração do sabor
+prejuízo financeiro
 
-🎥 Observações Durante o desenvolvimento, foi necessário ajustar os valores de luminosidade (300 e 700) para melhor representar os níveis de iluminação no ambiente simulado. 
+Nosso sistema automatiza esse controle e ajuda a manter o ambiente sempre dentro das condições ideais.
 
-✅ Conclusão O projeto atende ao objetivo proposto, permitindo o monitoramento da luminosidade e a geração de alertas visuais e sonoros em situações inadequadas. 
+⚙️ Como o sistema funciona?
 
-👨‍💻 Integrantes * Erick Ripari Gomes * Fabricio Denig * Guilherme Giménez
+O sistema monitora continuamente:
 
+🌡️ Temperatura
 
-Link WORKIWI: https://wokwi.com/projects/461602074695282689
+O sensor identifica se o ambiente está:
 
-Link Video explicativo:  https://canva.link/4z0kayi19m7t6hj
+muito quente
+muito frio
+ideal para armazenamento
+💧 Umidade
+
+O sistema verifica se o ar está:
+
+seco demais
+úmido demais
+adequado para conservação
+💡 Luminosidade
+
+A iluminação também é monitorada, já que excesso de luz pode prejudicar os vinhos.
+
+🚨 Sistema de Alertas Inteligentes
+
+Quando alguma condição está fora do ideal, o sistema avisa automaticamente através de:
+
+🟢 LEDs Indicadores
+
+Cada cor representa a situação do ambiente:
+
+Verde → Ambiente ideal
+Amarelo → Atenção
+Vermelho → Situação crítica
+🔊 Alerta Sonoro (Buzzer)
+
+Caso o ambiente esteja em situação crítica, um alarme sonoro é ativado.
+
+🖥️ Display LCD
+
+As informações aparecem em tempo real no display:
+
+temperatura atual
+umidade atual
+status do ambiente
+mensagens de alerta
+🛠️ Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando:
+
+Arduino UNO
+Sensor DHT22
+Sensor de Luminosidade
+Display LCD I2C
+LEDs
+Buzzer
+Linguagem C/C++
+📈 Benefícios do Projeto
+
+✅ Monitoramento em tempo real
+✅ Redução de perdas de produtos
+✅ Maior controle ambiental
+✅ Sistema automatizado
+✅ Fácil visualização das informações
+✅ Baixo custo de implementação
+✅ Tecnologia acessível e escalável
+
+🖥️ Simulação do Projeto
+
+O protótipo funcional pode ser acessado online através do Wokwi:
+
+Acessar Simulação no Wokwi
+
+📸 Estrutura do Sistema
+
+Abaixo está a montagem do circuito utilizado no projeto:
+
+![Circuito](./img/circuito.png)
+🔄 Funcionamento na Prática
+
+O sistema realiza leituras constantes dos sensores e toma decisões automaticamente.
+
+Exemplo:
+
+Se a temperatura aumentar acima do recomendado:
+o LED amarelo acende
+o buzzer é ativado
+o display informa “Temperatura Alta”
+
+O mesmo acontece para:
+
+umidade inadequada
+excesso de luminosidade
+💡 Possíveis Aplicações
+
+Este projeto pode ser utilizado em:
+
+vinherias
+adegas residenciais
+depósitos climatizados
+supermercados
+restaurantes
+distribuidoras de bebidas
+👨‍💻 Equipe de Desenvolvimento
+Erick Ripari Gomes — RM569441
+Guilherme Gimenez — RM563389
+Fabricio Denig — RM570980
+🎓 Projeto Acadêmico
+
+Projeto desenvolvido para a disciplina de Edge Computing & Computer Systems — FIAP (2026).
+
+📄 Licença
+
+Projeto desenvolvido exclusivamente para fins educacionais.
