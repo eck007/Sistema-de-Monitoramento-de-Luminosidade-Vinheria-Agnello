@@ -49,7 +49,7 @@ Por isso criamos um sistema automático capaz de identificar problemas em tempo 
 
 <div align="center">
 
-<img src="assets/circuito.png" width="850">
+<img src="Captura de tela 2026-05-22 195603.png" width="850">
 
 ### 🔌 Circuito desenvolvido no Wokwi utilizando Arduino UNO + Sensores + LCD + LEDs
 
