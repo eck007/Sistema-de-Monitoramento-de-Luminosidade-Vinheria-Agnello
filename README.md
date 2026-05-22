@@ -1,140 +1,289 @@
-🍷 Vinheria Agnello — Sistema Inteligente de Monitoramento de Vinhos
-📖 Sobre o Projeto
+<div align="center">
 
-A conservação correta dos vinhos é extremamente importante para garantir sua qualidade, sabor e durabilidade. Pequenas mudanças de temperatura, umidade ou luminosidade podem comprometer completamente o armazenamento das garrafas.
+# 🍷 Vinheria Agnello Inteligente
 
-Pensando nisso, desenvolvemos um sistema inteligente de monitoramento ambiental para vinherias, adegas e depósitos de armazenamento de vinho.
+### ⚙️ Sistema Inteligente de Monitoramento Ambiental com Arduino
 
-O projeto utiliza sensores conectados a um Arduino para analisar o ambiente em tempo real e alertar imediatamente quando as condições estiverem inadequadas.
+<img src="https://img.shields.io/badge/Arduino-IoT-blue?style=for-the-badge&logo=arduino">
+<img src="https://img.shields.io/badge/FIAP-Checkpoint%202-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Funcionando-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Wokwi-Simulation-0096FF?style=for-the-badge">
 
-🎯 Qual problema o sistema resolve?
+</div>
 
-Muitas adegas e depósitos podem sofrer com:
+---
 
-excesso de calor
-baixa umidade
-iluminação inadequada
-falta de monitoramento constante
+# 📖 Sobre o Projeto
 
-Esses fatores podem causar:
+Imagine uma adega onde o ambiente é monitorado automaticamente 24 horas por dia.
 
-perda da qualidade do vinho
-oxidação
-alteração do sabor
-prejuízo financeiro
+Nosso projeto simula exatamente isso.
 
-Nosso sistema automatiza esse controle e ajuda a manter o ambiente sempre dentro das condições ideais.
+A **Vinheria Agnello Inteligente** foi desenvolvida para monitorar fatores essenciais para a conservação dos vinhos:
 
-⚙️ Como o sistema funciona?
+<div align="center">
 
-O sistema monitora continuamente:
+🌡️ Temperatura  
+💧 Umidade  
+💡 Luminosidade  
 
-🌡️ Temperatura
+</div>
 
-O sensor identifica se o ambiente está:
+---
 
-muito quente
-muito frio
-ideal para armazenamento
-💧 Umidade
+# ❗ Por que isso é importante?
 
-O sistema verifica se o ar está:
+Vinhos são extremamente sensíveis ao ambiente.
 
-seco demais
-úmido demais
-adequado para conservação
-💡 Luminosidade
+Pequenas alterações podem causar:
+- perda da qualidade
+- alteração do sabor
+- oxidação
+- prejuízo financeiro
 
-A iluminação também é monitorada, já que excesso de luz pode prejudicar os vinhos.
+Por isso criamos um sistema automático capaz de identificar problemas em tempo real.
 
-🚨 Sistema de Alertas Inteligentes
+---
 
-Quando alguma condição está fora do ideal, o sistema avisa automaticamente através de:
+# 🖼️ Projeto Montado
 
-🟢 LEDs Indicadores
+<div align="center">
 
-Cada cor representa a situação do ambiente:
+<img src="assets/circuito.png" width="850">
 
-Verde → Ambiente ideal
-Amarelo → Atenção
-Vermelho → Situação crítica
-🔊 Alerta Sonoro (Buzzer)
+### 🔌 Circuito desenvolvido no Wokwi utilizando Arduino UNO + Sensores + LCD + LEDs
 
-Caso o ambiente esteja em situação crítica, um alarme sonoro é ativado.
+</div>
 
-🖥️ Display LCD
+---
 
-As informações aparecem em tempo real no display:
+# 🧠 Como o Sistema Funciona?
 
-temperatura atual
-umidade atual
-status do ambiente
-mensagens de alerta
-🛠️ Tecnologias Utilizadas
+O sistema trabalha em 4 etapas:
 
-O projeto foi desenvolvido utilizando:
+---
 
-Arduino UNO
-Sensor DHT22
-Sensor de Luminosidade
-Display LCD I2C
-LEDs
-Buzzer
-Linguagem C/C++
-📈 Benefícios do Projeto
+## 🥇 1. Leitura do Ambiente
 
-✅ Monitoramento em tempo real
-✅ Redução de perdas de produtos
-✅ Maior controle ambiental
-✅ Sistema automatizado
-✅ Fácil visualização das informações
-✅ Baixo custo de implementação
-✅ Tecnologia acessível e escalável
+Os sensores monitoram constantemente:
+- temperatura
+- umidade
+- luminosidade
 
-🖥️ Simulação do Projeto
+---
 
-O protótipo funcional pode ser acessado online através do Wokwi:
+## 🥈 2. Processamento Inteligente
 
-Acessar Simulação no Wokwi
+O Arduino recebe os dados e analisa se o ambiente está:
+- ideal
+- em alerta
+- crítico
 
-📸 Estrutura do Sistema
+---
 
-Abaixo está a montagem do circuito utilizado no projeto:
+## 🥉 3. Resposta Automática
 
-![Circuito](./img/circuito.png)
-🔄 Funcionamento na Prática
+Dependendo da situação:
+- LEDs são acionados
+- mensagens aparecem no LCD
+- o buzzer dispara alertas sonoros
 
-O sistema realiza leituras constantes dos sensores e toma decisões automaticamente.
+---
 
-Exemplo:
+## 🏁 4. Monitoramento em Tempo Real
 
-Se a temperatura aumentar acima do recomendado:
-o LED amarelo acende
-o buzzer é ativado
-o display informa “Temperatura Alta”
+Tudo acontece automaticamente e em tempo real.
 
-O mesmo acontece para:
+---
 
-umidade inadequada
-excesso de luminosidade
-💡 Possíveis Aplicações
+# 🔍 Entendendo os Componentes
 
-Este projeto pode ser utilizado em:
+---
 
-vinherias
-adegas residenciais
-depósitos climatizados
-supermercados
-restaurantes
-distribuidoras de bebidas
-👨‍💻 Equipe de Desenvolvimento
-Erick Ripari Gomes — RM569441
-Guilherme Gimenez — RM563389
-Fabricio Denig — RM570980
-🎓 Projeto Acadêmico
+## 🔌 Arduino UNO
 
-Projeto desenvolvido para a disciplina de Edge Computing & Computer Systems — FIAP (2026).
+É o cérebro do sistema.
 
-📄 Licença
+Responsável por:
+- processar os dados
+- controlar sensores
+- ativar LEDs
+- mostrar mensagens no display
 
-Projeto desenvolvido exclusivamente para fins educacionais.
+---
+
+## 🌡️ Sensor DHT22
+
+Responsável por medir:
+- temperatura
+- umidade
+
+---
+
+## 🌗 Sensor de Luminosidade (LDR)
+
+Mede a quantidade de luz no ambiente.
+
+👉 Quanto maior a luminosidade, maior o risco para os vinhos.
+
+---
+
+## 📟 Display LCD I2C
+
+Mostra:
+- temperatura atual
+- umidade atual
+- status do ambiente
+- alertas do sistema
+
+---
+
+## 💡 LEDs Inteligentes
+
+| Cor | Significado |
+|---|---|
+| 🟢 Verde | Ambiente ideal |
+| 🟡 Amarelo | Temperatura fora do ideal |
+| 🔴 Vermelho | Umidade/Luminosidade crítica |
+
+---
+
+## 🔊 Buzzer
+
+Dispara um alerta sonoro quando o ambiente entra em situação crítica.
+
+---
+
+# ⚙️ Componentes Utilizados
+
+<div align="center">
+
+| Componente | Função |
+|---|---|
+| 🔌 Arduino Uno | Controle principal |
+| 🌡️ DHT22 | Temperatura e umidade |
+| 🌗 LDR | Sensor de luminosidade |
+| 📟 LCD I2C | Exibição de informações |
+| 💡 LEDs | Alertas visuais |
+| 🔊 Buzzer | Alerta sonoro |
+| 🧩 Protoboard | Organização do circuito |
+| 🔗 Jumpers | Conexões |
+
+</div>
+
+---
+
+# 🚨 Funcionamento do Sistema
+
+## 🌡️ Temperatura
+
+| Situação | Ação |
+|---|---|
+| 10°C até 15°C | ✅ Temperatura ideal |
+| Abaixo de 10°C | ⚠️ Temp. Baixa |
+| Acima de 15°C | ⚠️ Temp. Alta |
+
+---
+
+## 💧 Umidade
+
+| Situação | Ação |
+|---|---|
+| 50% até 70% | ✅ Umidade ideal |
+| Abaixo de 50% | 🚨 Umidade baixa |
+| Acima de 70% | 🚨 Umidade alta |
+
+---
+
+## 💡 Luminosidade
+
+| Situação | Ação |
+|---|---|
+| Ambiente escuro | 🟢 LED Verde |
+| Meia luz | 🟡 LED Amarelo |
+| Ambiente muito claro | 🔴 LED Vermelho + Buzzer |
+
+---
+
+# 🧠 Exemplo da Lógica do Arduino
+
+```cpp
+float temperatura = dht.readTemperature();
+float umidade = dht.readHumidity();
+
+if (temperatura > 15) {
+  // Temperatura alta
+}
+else if (temperatura < 10) {
+  // Temperatura baixa
+}
+else {
+  // Ambiente ideal
+}
+```
+
+👉 O Arduino toma decisões automáticas utilizando lógica condicional (`if/else`).
+
+---
+
+# 🎯 Objetivos do Projeto
+
+✅ Simular uma adega inteligente  
+✅ Trabalhar com sensores reais  
+✅ Aplicar conceitos de IoT  
+✅ Automatizar monitoramento ambiental  
+✅ Desenvolver lógica embarcada  
+✅ Criar alertas inteligentes  
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Arduino-00979D?style=flat&logo=arduino&logoColor=white">
+<img src="https://img.shields.io/badge/Wokwi-0096FF?style=flat">
+<img src="https://img.shields.io/badge/C%2B%2B-Language-blue">
+<img src="https://img.shields.io/badge/IoT-Internet%20of%20Things-success">
+
+</div>
+
+---
+
+# 🔗 Acesse o Projeto
+
+<div align="center">
+
+## 👉 Simulação no Wokwi
+
+https://wokwi.com/projects/461602074695282689
+
+</div>
+
+---
+
+# 👨‍💻 Equipe de Desenvolvimento
+
+<div align="center">
+
+| Integrante | RM |
+|---|---|
+| Erick Ripari Gomes | RM569441 |
+| Guilherme Gimenez | RM563389 |
+| Fabricio Denig | RM570980 |
+
+</div>
+
+---
+
+# 🏫 Contexto Acadêmico
+
+Projeto desenvolvido para o **Checkpoint 02** da disciplina de **Edge Computing** — FIAP 2026.
+
+---
+
+<div align="center">
+
+# 🍷 Obrigado por visitar nosso projeto!
+
+</div>
