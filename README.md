@@ -258,6 +258,10 @@ else {
 
 https://wokwi.com/projects/461602074695282689
 
+## 👉 Video Explicando
+
+https://www.youtube.com/watch?v=KthHgdciu1o
+
 </div>
 
 ---
